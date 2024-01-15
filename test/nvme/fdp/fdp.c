@@ -8,6 +8,14 @@
 #include "spdk/env.h"
 #include "spdk/util.h"
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/time.h>
+
+//FILE *fp;
+//char filename0[100] = {0,};
+//struct timeval start, end;
+
 #define FDP_LOG_PAGE_SIZE		4096
 #define FDP_NR_RUHS_DESC		256
 #define MAX_FDP_EVENTS			0xFF
@@ -135,6 +143,7 @@ set_fdp_events(struct spdk_nvme_ns *ns)
 	int ret;
 	uint8_t fdp_event_type_list[6] = {};
 	uint32_t nfdp_events = 6;
+	uint32_t nfdp_events128=128;
 	uint32_t cdw11, cdw12;
 	struct spdk_nvme_ctrlr *ctrlr = spdk_nvme_ns_get_ctrlr(ns);
 	int nsid = spdk_nvme_ns_get_id(ns);
@@ -287,15 +296,15 @@ check_fdp_write(struct spdk_nvme_ns *ns, struct spdk_nvme_qpair *qpair)
 	g_fdp_command_result = -1;
 
 	ext_opts.size = SPDK_SIZEOF(&ext_opts, cdw13);
-	ext_opts.io_flags = SPDK_NVME_IO_FLAGS_DATA_PLACEMENT_DIRECTIVE;
+	ext_opts.io_flags = SPDK_NVME_IO_FLAGS_DATA_PLACEMENT_DIRECTIVE;	//here
 	ext_opts.metadata = NULL;
-	ext_opts.cdw13 = (pid_for_ruhu << 16);
+	ext_opts.cdw13 = (pid_for_ruhu << 16);								//here
 
 	sector_size = spdk_nvme_ns_get_sector_size(ns);
-
+	/*1. request alloc*/
 	req = spdk_zmalloc(sizeof(*req), 0, NULL, SPDK_ENV_LCORE_ID_ANY, SPDK_MALLOC_DMA);
 	assert(req);
-
+	/*2. set lba and req size*/
 	lba = 0;
 	lba_count = 8;
 	req->buf_size = sector_size * lba_count;
@@ -303,6 +312,7 @@ check_fdp_write(struct spdk_nvme_ns *ns, struct spdk_nvme_qpair *qpair)
 				   SPDK_MALLOC_DMA);
 	assert(req->contig);
 
+	/*3. write fdp */
 	ret = spdk_nvme_ns_cmd_writev_ext(ns, qpair, lba, lba_count, cmd_completion, req,
 					  nvme_req_reset_sgl, nvme_req_next_sge, &ext_opts);
 
@@ -310,6 +320,86 @@ check_fdp_write(struct spdk_nvme_ns *ns, struct spdk_nvme_qpair *qpair)
 		fprintf(stderr, "spdk_nvme_ns_cmd_writev_ext failed\n\n");
 		return -1;
 	}
+
+	g_outstanding_commands++;
+	while (g_outstanding_commands) {
+		//fprintf(stderr, "inho, outstanding_commands! %d\n",g_outstanding_commands);
+		spdk_nvme_qpair_process_completions(qpair, 100);
+	}
+
+	if (g_fdp_command_result) {
+		fprintf(stderr, "FDP write on placement id: %u failed\n\n", pid_for_ruhu);
+	} else {
+		fprintf(stdout, "FDP write on placement id: %u success\n\n", pid_for_ruhu);
+	}
+
+	spdk_free(req->contig);
+	spdk_free(req);
+	return g_fdp_command_result;
+}
+
+// static uint64_t random_number_generator(uint64_t range, int flags){
+// 	if(flags == PURE_RANDOM) 
+// 		return (rand()%(range-1));
+// 	else if ( flags == NON_OVERLAPPING_RANDOM )
+// 		return next_non_overlapping_random();
+// 	else if ( flags == ZIPF_RANDOM)
+// 		return next_zipf_random(); 
+// }
+
+/**
+ * Inhoinno inho_check_fdp_randomwrite
+*/
+
+static int
+inho_check_fdp_randomwrite(struct spdk_nvme_ns *ns, struct spdk_nvme_qpair *qpair, uint64_t io_range, uint64_t request_size_range)
+{
+	int ret;
+	uint32_t sector_size, lba_count;
+	//uint64_t random_slba;
+	uint64_t lba;
+	//uint32_t nsid = ns->id;
+	struct io_request *req;
+	struct spdk_nvme_ns_cmd_ext_io_opts ext_opts;
+
+	g_outstanding_commands = 0;
+	g_fdp_command_result = -1;
+
+	ext_opts.size = SPDK_SIZEOF(&ext_opts, cdw13);
+	ext_opts.io_flags = SPDK_NVME_IO_FLAGS_DATA_PLACEMENT_DIRECTIVE;//here?
+	ext_opts.metadata = NULL;
+	ext_opts.cdw13 = (pid_for_ruhu << 16);
+
+	sector_size = spdk_nvme_ns_get_sector_size(ns);
+	/*1. request alloc*/
+	req = spdk_zmalloc(sizeof(*req), 0, NULL, SPDK_ENV_LCORE_ID_ANY, SPDK_MALLOC_DMA);
+	assert(req);
+	/*2. set lba and req size*/
+	lba = (io_range != 0)? (rand() % (io_range-1)) : 0;	//random LBA here
+	//lba_count = 8;	//8 4KB
+	lba_count = (lba % 2) ? 8 : 512; //4K : 256K
+	req->buf_size = sector_size * lba_count;
+	req->contig = spdk_zmalloc(req->buf_size, 0x1000, NULL, SPDK_ENV_LCORE_ID_ANY,
+				   SPDK_MALLOC_DMA);
+
+	assert(req->contig);
+
+	/*3. write fdp */
+	ret = spdk_nvme_ns_cmd_writev_ext(ns, qpair, lba, lba_count, cmd_completion, req,
+					  nvme_req_reset_sgl, nvme_req_next_sge, &ext_opts);
+
+	if (ret) {
+		fprintf(stderr, "spdk_nvme_ns_cmd_writev_ext failed\n\n");
+		return -1;
+	}
+	//gettimeofday(&end, NULL);
+	/*
+	//fprintf(fp, "start(s) 	end(s) 	start(us) 	end(us) time(s) time(us), pid, slba, nlb, secsize\n");
+	fprintf(fp, "%lu, 	%lu, 	%lu,	%lu,	%lu,	%lu, 	%u,		%lu, 	%u,		%u\n",\
+			start.tv_sec, end.tv_sec, start.tv_usec, end.tv_usec, \
+			end.tv_sec-start.tv_sec,end.tv_usec-start.tv_usec,\ 
+			(pid_for_ruhu << 16), lba, lba_count ,sector_size);
+	*/
 
 	g_outstanding_commands++;
 	while (g_outstanding_commands) {
@@ -417,6 +507,9 @@ reclaim_unit_handle_status(struct spdk_nvme_ns *ns, struct spdk_nvme_qpair *qpai
 
 	/* Use this Placement Handle to enable FDP events */
 	ph_for_fdp_event = pid_for_ruhu & ((1 << (16 - rgif)) - 1);
+	// = 0
+	fprintf(stdout, " ph_for_fdp_event: #%04u \n", ph_for_fdp_event);
+
 
 	free(fdp_ruhs);
 	return 0;
@@ -690,7 +783,9 @@ fdp_tests(struct spdk_nvme_ns *ns)
 {
 	struct spdk_nvme_qpair *qpair;
 	struct spdk_nvme_ctrlr *ctrlr = spdk_nvme_ns_get_ctrlr(ns);
+	uint32_t inc = 4;
 	int ret, err;
+
 
 	qpair = spdk_nvme_ctrlr_alloc_io_qpair(ctrlr, NULL, 0);
 	if (!qpair) {
@@ -731,12 +826,28 @@ fdp_tests(struct spdk_nvme_ns *ns)
 		return err;
 	}
 
+	//err = check_fdp_write(ns, qpair);		//fdp_write
+	//1GB = 512*2,097,152
+
 	err = check_fdp_write(ns, qpair);
+
 	if (err) {
 		spdk_nvme_ctrlr_free_io_qpair(qpair);
 		return err;
 	}
+	/*
+	gettimeofday(&start, NULL);
+	for (uint32_t i=0; i < 2097152; i+=inc){
+		err = inho_check_fdp_randomwrite(ns,qpair, (1024*1024/4/inc), 0);
 
+		if (err) {
+			spdk_nvme_ctrlr_free_io_qpair(qpair);
+			return err;
+		}
+	}	
+	
+	fprintf (fp , "total nlb written : %d(MB) \n", (1024/inc));
+	*/
 	ret += set_fdp_events(ns);
 	ret += reclaim_unit_handle_update(ns, qpair);
 
@@ -878,6 +989,15 @@ main(int argc, char **argv)
 	struct spdk_env_opts	opts;
 	struct ns_entry	*ns_entry;
 
+	srand(time(NULL));
+	//sprintf(filename0, "write_report.csv");
+	//fp = fopen(filename0 , "w");
+	//fprintf(fp, "write test\n");
+	//fprintf(fp, "write test random 1G\n");
+	//				1		2		3		4		5		6		7		8	9		10
+	//fprintf(fp, "start(s),\t\tend(s),\t\tstart(us),\t\tend(us),\t\ttime(s),\t\ttime(us),\t\tpid,\t\tslba,\t\tnlb,\t\tsecsize\n");
+	//fclose(fp);
+
 	spdk_env_opts_init(&opts);
 	rc = parse_args(argc, argv, &opts);
 	if (rc != 0) {
@@ -917,6 +1037,7 @@ main(int argc, char **argv)
 	}
 
 	printf("FDP test %s\n", rc ? "failed" : "passed");
+	
 	cleanup();
 
 	return 0;

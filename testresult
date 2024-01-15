@@ -1,0 +1,2991 @@
+************************************
+START TEST unittest_pci_event
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: pci_event
+  Test: test_pci_parse_event ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     15     15     15      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_pci_event
+************************************
+************************************
+START TEST unittest_include
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: histogram
+  Test: histogram_test ...passed
+  Test: histogram_merge ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     50     50     50      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_include
+************************************
+************************************
+START TEST unittest_bdev
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev
+  Test: bytes_to_blocks_test ...passed
+  Test: num_blocks_test ...passed
+  Test: io_valid_test ...passed
+  Test: open_write_test ...passed
+  Test: claim_test ...passed
+  Test: alias_add_del_test ...passed
+  Test: get_device_stat_test ...passed
+  Test: bdev_io_types_test ...passed
+  Test: bdev_io_wait_test ...passed
+  Test: bdev_io_spans_split_test ...passed
+  Test: bdev_io_boundary_split_test ...passed
+  Test: bdev_io_max_size_and_segment_split_test ...passed
+  Test: bdev_io_mix_split_test ...passed
+  Test: bdev_io_split_with_io_wait ...passed
+  Test: bdev_io_write_unit_split_test ...passed
+  Test: bdev_io_alignment_with_boundary ...passed
+  Test: bdev_io_alignment ...passed
+  Test: bdev_histograms ...passed
+  Test: bdev_write_zeroes ...passed
+  Test: bdev_compare_and_write ...passed
+  Test: bdev_compare ...passed
+  Test: bdev_compare_emulated ...passed
+  Test: bdev_zcopy_write ...passed
+  Test: bdev_zcopy_read ...passed
+  Test: bdev_open_while_hotremove ...passed
+  Test: bdev_close_while_hotremove ...passed
+  Test: bdev_open_ext_test ...passed
+  Test: bdev_open_ext_unregister ...passed
+  Test: bdev_set_io_timeout ...passed
+  Test: bdev_set_qd_sampling ...passed
+  Test: lba_range_overlap ...passed
+  Test: lock_lba_range_check_ranges ...passed
+  Test: lock_lba_range_with_io_outstanding ...passed
+  Test: lock_lba_range_overlapped ...passed
+  Test: bdev_quiesce ...passed
+  Test: bdev_io_abort ...passed
+  Test: bdev_unmap ...passed
+  Test: bdev_write_zeroes_split_test ...passed
+  Test: bdev_set_options_test ...passed
+  Test: bdev_get_memory_domains ...passed
+  Test: bdev_io_ext ...passed
+  Test: bdev_io_ext_no_opts ...passed
+  Test: bdev_io_ext_invalid_opts ...passed
+  Test: bdev_io_ext_split ...passed
+  Test: bdev_io_ext_bounce_buffer ...passed
+  Test: bdev_register_uuid_alias ...passed
+  Test: bdev_unregister_by_name ...passed
+  Test: for_each_bdev_test ...passed
+  Test: bdev_seek_test ...passed
+  Test: bdev_copy ...passed
+  Test: bdev_copy_split_test ...passed
+  Test: examine_locks ...passed
+  Test: claim_v2_rwo ...passed
+  Test: claim_v2_rom ...passed
+  Test: claim_v2_rwm ...passed
+  Test: claim_v2_existing_writer ...passed
+  Test: claim_v2_existing_v1 ...passed
+  Test: claim_v1_existing_v2 ...passed
+  Test: examine_claimed ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     59     59     59      0        0
+             asserts   4456   4456   4456      0      n/a
+
+Elapsed time =    0.075 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme
+  Test: test_create_ctrlr ...passed
+  Test: test_reset_ctrlr ...passed
+  Test: test_race_between_reset_and_destruct_ctrlr ...passed
+  Test: test_failover_ctrlr ...passed
+  Test: test_race_between_failover_and_add_secondary_trid ...passed
+  Test: test_pending_reset ...passed
+  Test: test_attach_ctrlr ...passed
+  Test: test_aer_cb ...passed
+  Test: test_submit_nvme_cmd ...passed
+  Test: test_add_remove_trid ...passed
+  Test: test_abort ...passed
+  Test: test_get_io_qpair ...passed
+  Test: test_bdev_unregister ...passed
+  Test: test_compare_ns ...passed
+  Test: test_init_ana_log_page ...passed
+  Test: test_get_memory_domains ...passed
+  Test: test_reconnect_qpair ...passed
+  Test: test_create_bdev_ctrlr ...passed
+  Test: test_add_multi_ns_to_bdev ...passed
+  Test: test_add_multi_io_paths_to_nbdev_ch ...passed
+  Test: test_admin_path ...passed
+  Test: test_reset_bdev_ctrlr ...passed
+  Test: test_find_io_path ...passed
+  Test: test_retry_io_if_ana_state_is_updating ...passed
+  Test: test_retry_io_for_io_path_error ...passed
+  Test: test_retry_io_count ...passed
+  Test: test_concurrent_read_ana_log_page ...passed
+  Test: test_retry_io_for_ana_error ...passed
+  Test: test_check_io_error_resiliency_params ...passed
+  Test: test_retry_io_if_ctrlr_is_resetting ...passed
+  Test: test_reconnect_ctrlr ...passed
+  Test: test_retry_failover_ctrlr ...passed
+  Test: test_fail_path ...passed
+  Test: test_nvme_ns_cmp ...passed
+  Test: test_ana_transition ...passed
+  Test: test_set_preferred_path ...passed
+  Test: test_find_next_io_path ...passed
+  Test: test_find_io_path_min_qd ...passed
+  Test: test_disable_auto_failback ...passed
+  Test: test_set_multipath_policy ...passed
+  Test: test_uuid_generation ...passed
+  Test: test_retry_io_to_same_path ...passed
+  Test: test_race_between_reset_and_disconnected ...passed
+  Test: test_ctrlr_op_rpc ...passed
+  Test: test_bdev_ctrlr_op_rpc ...passed
+  Test: test_disable_enable_ctrlr ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     46     46     46      0        0
+             asserts   3522   3522   3522      0      n/a
+
+Elapsed time =    0.002 seconds
+Test Options
+blocklen = 4096, strip_size = 64, max_io_size = 1024, g_max_base_drives = 32, g_max_raids = 2
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: raid
+  Test: test_create_raid ...passed
+  Test: test_delete_raid ...passed
+  Test: test_create_raid_invalid_args ...passed
+  Test: test_delete_raid_invalid_args ...passed
+  Test: test_io_channel ...passed
+  Test: test_reset_io ...passed
+  Test: test_write_io ...passed
+  Test: test_read_io ...passed
+  Test: test_unmap_io ...passed
+  Test: test_io_failure ...passed
+  Test: test_multi_raid_no_io ...passed
+  Test: test_multi_raid_with_io ...passed
+  Test: test_io_type_supported ...passed
+  Test: test_raid_json_dump_info ...passed
+  Test: test_context_size ...passed
+  Test: test_raid_level_conversions ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     16     16     16      0        0
+             asserts 172860 172860 172860      0      n/a
+
+Elapsed time =    0.004 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: concat
+  Test: test_concat_start ...passed
+  Test: test_concat_rw ...passed
+  Test: test_concat_null_payload ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts   7967   7967   7967      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: raid1
+  Test: test_raid1_start ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts    144    144    144      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: zone
+  Test: test_zone_get_operation ...passed
+  Test: test_bdev_zone_get_info ...passed
+  Test: test_bdev_zone_management ...passed
+  Test: test_bdev_zone_append ...passed
+  Test: test_bdev_zone_append_with_md ...passed
+  Test: test_bdev_zone_appendv ...passed
+  Test: test_bdev_zone_appendv_with_md ...passed
+  Test: test_bdev_io_get_append_location ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts     94     94     94      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: gpt_parse
+  Test: test_parse_mbr_and_primary ...passed
+  Test: test_parse_secondary ...passed
+  Test: test_check_mbr ...passed
+  Test: test_read_header ...passed
+  Test: test_read_partitions ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     33     33     33      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev_part
+  Test: part_test ...passed
+  Test: part_free_test ...passed
+  Test: part_get_io_channel_test ...passed
+  Test: part_construct_ext ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      4      4      4      0        0
+             asserts     48     48     48      0      n/a
+
+Elapsed time =    0.003 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: scsi_nvme_suite
+  Test: scsi_nvme_translate_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts    104    104    104      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: lvol
+  Test: ut_lvs_init ...passed
+  Test: ut_lvol_init ...passed
+  Test: ut_lvol_snapshot ...passed
+  Test: ut_lvol_clone ...passed
+  Test: ut_lvs_destroy ...passed
+  Test: ut_lvs_unload ...passed
+  Test: ut_lvol_resize ...passed
+  Test: ut_lvol_set_read_only ...passed
+  Test: ut_lvol_hotremove ...passed
+  Test: ut_vbdev_lvol_get_io_channel ...passed
+  Test: ut_vbdev_lvol_io_type_supported ...passed
+  Test: ut_lvol_read_write ...passed
+  Test: ut_vbdev_lvol_submit_request ...passed
+  Test: ut_lvol_examine_config ...passed
+  Test: ut_lvol_examine_disk ...passed
+  Test: ut_lvol_rename ...passed
+  Test: ut_bdev_finish ...passed
+  Test: ut_lvs_rename ...passed
+  Test: ut_lvol_seek ...passed
+  Test: ut_esnap_dev_create ...passed
+  Test: ut_lvol_esnap_clone_bad_args ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     21     21     21      0        0
+             asserts    712    712    712      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: zone_block
+  Test: test_zone_block_create ...passed
+  Test: test_zone_block_create_invalid ...passed
+  Test: test_get_zone_info ...passed
+  Test: test_supported_io_types ...passed
+  Test: test_reset_zone ...passed
+  Test: test_open_zone ...passed
+  Test: test_zone_write ...passed
+  Test: test_zone_read ...passed
+  Test: test_close_zone ...passed
+  Test: test_finish_zone ...passed
+  Test: test_append_zone ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     11     11     11      0        0
+             asserts   3437   3437   3437      0      n/a
+
+Elapsed time =    0.002 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: bdev
+  Test: basic ...passed
+  Test: unregister_and_close ...passed
+  Test: unregister_and_close_different_threads ...passed
+  Test: basic_qos ...passed
+  Test: put_channel_during_reset ...passed
+  Test: aborted_reset ...passed
+  Test: aborted_reset_no_outstanding_io ...passed
+  Test: io_during_reset ...passed
+  Test: reset_completions ...passed
+  Test: io_during_qos_queue ...passed
+  Test: io_during_qos_reset ...passed
+  Test: enomem ...passed
+  Test: enomem_multi_bdev ...passed
+  Test: enomem_multi_bdev_unregister ...passed
+  Test: enomem_multi_io_target ...passed
+  Test: qos_dynamic_enable ...passed
+  Test: bdev_histograms_mt ...passed
+  Test: bdev_set_io_timeout_mt ...passed
+  Test: lock_lba_range_then_submit_io ...passed
+  Test: unregister_during_reset ...passed
+  Test: event_notify_and_close ...passed
+Suite: bdev_wrong_thread
+  Test: spdk_bdev_register_wt ...passed
+  Test: spdk_bdev_examine_wt ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      2      2    n/a      0        0
+               tests     23     23     23      0        0
+             asserts    581    581    581      0      n/a
+
+Elapsed time =    0.055 seconds
+************************************
+END TEST unittest_bdev
+************************************
+************************************
+START TEST unittest_blob_blobfs
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: blob_nocopy_noextent
+  Test: blob_init ...passed
+  Test: blob_thin_provision ...passed
+  Test: blob_read_only ...passed
+  Test: bs_load ...passed
+  Test: bs_load_custom_cluster_size ...passed
+  Test: bs_load_after_failed_grow ...passed
+  Test: bs_cluster_sz ...passed
+  Test: bs_resize_md ...passed
+  Test: bs_destroy ...passed
+  Test: bs_type ...passed
+  Test: bs_super_block ...passed
+  Test: bs_test_recover_cluster_count ...passed
+  Test: bs_test_grow ...passed
+  Test: blob_serialize_test ...passed
+  Test: super_block_crc ...passed
+  Test: blob_thin_prov_write_count_io ...passed
+  Test: bs_load_iter_test ...passed
+  Test: blob_relations ...passed
+  Test: blob_relations2 ...passed
+  Test: blob_relations3 ...passed
+  Test: blobstore_clean_power_failure ...passed
+  Test: blob_delete_snapshot_power_failure ...passed
+  Test: blob_create_snapshot_power_failure ...passed
+  Test: blob_io_unit ...passed
+  Test: blob_io_unit_compatibility ...passed
+  Test: blob_ext_md_pages ...passed
+  Test: blob_esnap_io_4096_4096 ...passed
+  Test: blob_esnap_io_512_512 ...passed
+  Test: blob_esnap_io_4096_512 ...passed
+  Test: blob_esnap_io_512_4096 ...passed
+Suite: blob_bs_nocopy_noextent
+  Test: blob_open ...passed
+  Test: blob_create ...passed
+  Test: blob_create_loop ...passed
+  Test: blob_create_fail ...passed
+  Test: blob_create_internal ...passed
+  Test: blob_create_zero_extent ...passed
+  Test: blob_snapshot ...passed
+  Test: blob_clone ...passed
+  Test: blob_inflate ...passed
+  Test: blob_delete ...passed
+  Test: blob_resize_test ...passed
+  Test: channel_ops ...passed
+  Test: blob_super ...passed
+  Test: blob_rw_verify_iov ...passed
+  Test: blob_unmap ...passed
+  Test: blob_iter ...passed
+  Test: blob_parse_md ...passed
+  Test: bs_load_pending_removal ...passed
+  Test: bs_unload ...passed
+  Test: bs_usable_clusters ...passed
+  Test: blob_crc ...passed
+  Test: blob_flags ...passed
+  Test: bs_version ...passed
+  Test: blob_set_xattrs_test ...passed
+  Test: blob_thin_prov_alloc ...passed
+  Test: blob_insert_cluster_msg_test ...passed
+  Test: blob_thin_prov_rw ...passed
+  Test: blob_thin_prov_rle ...passed
+  Test: blob_thin_prov_rw_iov ...passed
+  Test: blob_snapshot_rw ...passed
+  Test: blob_snapshot_rw_iov ...passed
+  Test: blob_inflate_rw ...passed
+  Test: blob_snapshot_freeze_io ...passed
+  Test: blob_operation_split_rw ...passed
+  Test: blob_operation_split_rw_iov ...passed
+  Test: blob_simultaneous_operations ...passed
+  Test: blob_persist_test ...passed
+  Test: blob_decouple_snapshot ...passed
+  Test: blob_seek_io_unit ...passed
+  Test: blob_nested_freezes ...passed
+Suite: blob_blob_nocopy_noextent
+  Test: blob_write ...passed
+  Test: blob_read ...passed
+  Test: blob_rw_verify ...passed
+  Test: blob_rw_verify_iov_nomem ...passed
+  Test: blob_rw_iov_read_only ...passed
+  Test: blob_xattr ...passed
+  Test: blob_dirty_shutdown ...passed
+  Test: blob_is_degraded ...passed
+Suite: blob_esnap_bs_nocopy_noextent
+  Test: blob_esnap_create ...passed
+  Test: blob_esnap_thread_add_remove ...passed
+  Test: blob_esnap_clone_snapshot ...passed
+  Test: blob_esnap_clone_inflate ...passed
+  Test: blob_esnap_clone_decouple ...passed
+  Test: blob_esnap_clone_reload ...passed
+  Test: blob_esnap_hotplug ...passed
+Suite: blob_nocopy_extent
+  Test: blob_init ...passed
+  Test: blob_thin_provision ...passed
+  Test: blob_read_only ...passed
+  Test: bs_load ...passed
+  Test: bs_load_custom_cluster_size ...passed
+  Test: bs_load_after_failed_grow ...passed
+  Test: bs_cluster_sz ...passed
+  Test: bs_resize_md ...passed
+  Test: bs_destroy ...passed
+  Test: bs_type ...passed
+  Test: bs_super_block ...passed
+  Test: bs_test_recover_cluster_count ...passed
+  Test: bs_test_grow ...passed
+  Test: blob_serialize_test ...passed
+  Test: super_block_crc ...passed
+  Test: blob_thin_prov_write_count_io ...passed
+  Test: bs_load_iter_test ...passed
+  Test: blob_relations ...passed
+  Test: blob_relations2 ...passed
+  Test: blob_relations3 ...passed
+  Test: blobstore_clean_power_failure ...passed
+  Test: blob_delete_snapshot_power_failure ...passed
+  Test: blob_create_snapshot_power_failure ...passed
+  Test: blob_io_unit ...passed
+  Test: blob_io_unit_compatibility ...passed
+  Test: blob_ext_md_pages ...passed
+  Test: blob_esnap_io_4096_4096 ...passed
+  Test: blob_esnap_io_512_512 ...passed
+  Test: blob_esnap_io_4096_512 ...passed
+  Test: blob_esnap_io_512_4096 ...passed
+Suite: blob_bs_nocopy_extent
+  Test: blob_open ...passed
+  Test: blob_create ...passed
+  Test: blob_create_loop ...passed
+  Test: blob_create_fail ...passed
+  Test: blob_create_internal ...passed
+  Test: blob_create_zero_extent ...passed
+  Test: blob_snapshot ...passed
+  Test: blob_clone ...passed
+  Test: blob_inflate ...passed
+  Test: blob_delete ...passed
+  Test: blob_resize_test ...passed
+  Test: channel_ops ...passed
+  Test: blob_super ...passed
+  Test: blob_rw_verify_iov ...passed
+  Test: blob_unmap ...passed
+  Test: blob_iter ...passed
+  Test: blob_parse_md ...passed
+  Test: bs_load_pending_removal ...passed
+  Test: bs_unload ...passed
+  Test: bs_usable_clusters ...passed
+  Test: blob_crc ...passed
+  Test: blob_flags ...passed
+  Test: bs_version ...passed
+  Test: blob_set_xattrs_test ...passed
+  Test: blob_thin_prov_alloc ...passed
+  Test: blob_insert_cluster_msg_test ...passed
+  Test: blob_thin_prov_rw ...passed
+  Test: blob_thin_prov_rle ...passed
+  Test: blob_thin_prov_rw_iov ...passed
+  Test: blob_snapshot_rw ...passed
+  Test: blob_snapshot_rw_iov ...passed
+  Test: blob_inflate_rw ...passed
+  Test: blob_snapshot_freeze_io ...passed
+  Test: blob_operation_split_rw ...passed
+  Test: blob_operation_split_rw_iov ...passed
+  Test: blob_simultaneous_operations ...passed
+  Test: blob_persist_test ...passed
+  Test: blob_decouple_snapshot ...passed
+  Test: blob_seek_io_unit ...passed
+  Test: blob_nested_freezes ...passed
+Suite: blob_blob_nocopy_extent
+  Test: blob_write ...passed
+  Test: blob_read ...passed
+  Test: blob_rw_verify ...passed
+  Test: blob_rw_verify_iov_nomem ...passed
+  Test: blob_rw_iov_read_only ...passed
+  Test: blob_xattr ...passed
+  Test: blob_dirty_shutdown ...passed
+  Test: blob_is_degraded ...passed
+Suite: blob_esnap_bs_nocopy_extent
+  Test: blob_esnap_create ...passed
+  Test: blob_esnap_thread_add_remove ...passed
+  Test: blob_esnap_clone_snapshot ...passed
+  Test: blob_esnap_clone_inflate ...passed
+  Test: blob_esnap_clone_decouple ...passed
+  Test: blob_esnap_clone_reload ...passed
+  Test: blob_esnap_hotplug ...passed
+Suite: blob_copy_noextent
+  Test: blob_init ...passed
+  Test: blob_thin_provision ...passed
+  Test: blob_read_only ...passed
+  Test: bs_load ...passed
+  Test: bs_load_custom_cluster_size ...passed
+  Test: bs_load_after_failed_grow ...passed
+  Test: bs_cluster_sz ...passed
+  Test: bs_resize_md ...passed
+  Test: bs_destroy ...passed
+  Test: bs_type ...passed
+  Test: bs_super_block ...passed
+  Test: bs_test_recover_cluster_count ...passed
+  Test: bs_test_grow ...passed
+  Test: blob_serialize_test ...passed
+  Test: super_block_crc ...passed
+  Test: blob_thin_prov_write_count_io ...passed
+  Test: bs_load_iter_test ...passed
+  Test: blob_relations ...passed
+  Test: blob_relations2 ...passed
+  Test: blob_relations3 ...passed
+  Test: blobstore_clean_power_failure ...passed
+  Test: blob_delete_snapshot_power_failure ...passed
+  Test: blob_create_snapshot_power_failure ...passed
+  Test: blob_io_unit ...passed
+  Test: blob_io_unit_compatibility ...passed
+  Test: blob_ext_md_pages ...passed
+  Test: blob_esnap_io_4096_4096 ...passed
+  Test: blob_esnap_io_512_512 ...passed
+  Test: blob_esnap_io_4096_512 ...passed
+  Test: blob_esnap_io_512_4096 ...passed
+Suite: blob_bs_copy_noextent
+  Test: blob_open ...passed
+  Test: blob_create ...passed
+  Test: blob_create_loop ...passed
+  Test: blob_create_fail ...passed
+  Test: blob_create_internal ...passed
+  Test: blob_create_zero_extent ...passed
+  Test: blob_snapshot ...passed
+  Test: blob_clone ...passed
+  Test: blob_inflate ...passed
+  Test: blob_delete ...passed
+  Test: blob_resize_test ...passed
+  Test: channel_ops ...passed
+  Test: blob_super ...passed
+  Test: blob_rw_verify_iov ...passed
+  Test: blob_unmap ...passed
+  Test: blob_iter ...passed
+  Test: blob_parse_md ...passed
+  Test: bs_load_pending_removal ...passed
+  Test: bs_unload ...passed
+  Test: bs_usable_clusters ...passed
+  Test: blob_crc ...passed
+  Test: blob_flags ...passed
+  Test: bs_version ...passed
+  Test: blob_set_xattrs_test ...passed
+  Test: blob_thin_prov_alloc ...passed
+  Test: blob_insert_cluster_msg_test ...passed
+  Test: blob_thin_prov_rw ...passed
+  Test: blob_thin_prov_rle ...passed
+  Test: blob_thin_prov_rw_iov ...passed
+  Test: blob_snapshot_rw ...passed
+  Test: blob_snapshot_rw_iov ...passed
+  Test: blob_inflate_rw ...passed
+  Test: blob_snapshot_freeze_io ...passed
+  Test: blob_operation_split_rw ...passed
+  Test: blob_operation_split_rw_iov ...passed
+  Test: blob_simultaneous_operations ...passed
+  Test: blob_persist_test ...passed
+  Test: blob_decouple_snapshot ...passed
+  Test: blob_seek_io_unit ...passed
+  Test: blob_nested_freezes ...passed
+Suite: blob_blob_copy_noextent
+  Test: blob_write ...passed
+  Test: blob_read ...passed
+  Test: blob_rw_verify ...passed
+  Test: blob_rw_verify_iov_nomem ...passed
+  Test: blob_rw_iov_read_only ...passed
+  Test: blob_xattr ...passed
+  Test: blob_dirty_shutdown ...passed
+  Test: blob_is_degraded ...passed
+Suite: blob_esnap_bs_copy_noextent
+  Test: blob_esnap_create ...passed
+  Test: blob_esnap_thread_add_remove ...passed
+  Test: blob_esnap_clone_snapshot ...passed
+  Test: blob_esnap_clone_inflate ...passed
+  Test: blob_esnap_clone_decouple ...passed
+  Test: blob_esnap_clone_reload ...passed
+  Test: blob_esnap_hotplug ...passed
+Suite: blob_copy_extent
+  Test: blob_init ...passed
+  Test: blob_thin_provision ...passed
+  Test: blob_read_only ...passed
+  Test: bs_load ...passed
+  Test: bs_load_custom_cluster_size ...passed
+  Test: bs_load_after_failed_grow ...passed
+  Test: bs_cluster_sz ...passed
+  Test: bs_resize_md ...passed
+  Test: bs_destroy ...passed
+  Test: bs_type ...passed
+  Test: bs_super_block ...passed
+  Test: bs_test_recover_cluster_count ...passed
+  Test: bs_test_grow ...passed
+  Test: blob_serialize_test ...passed
+  Test: super_block_crc ...passed
+  Test: blob_thin_prov_write_count_io ...passed
+  Test: bs_load_iter_test ...passed
+  Test: blob_relations ...passed
+  Test: blob_relations2 ...passed
+  Test: blob_relations3 ...passed
+  Test: blobstore_clean_power_failure ...passed
+  Test: blob_delete_snapshot_power_failure ...passed
+  Test: blob_create_snapshot_power_failure ...passed
+  Test: blob_io_unit ...passed
+  Test: blob_io_unit_compatibility ...passed
+  Test: blob_ext_md_pages ...passed
+  Test: blob_esnap_io_4096_4096 ...passed
+  Test: blob_esnap_io_512_512 ...passed
+  Test: blob_esnap_io_4096_512 ...passed
+  Test: blob_esnap_io_512_4096 ...passed
+Suite: blob_bs_copy_extent
+  Test: blob_open ...passed
+  Test: blob_create ...passed
+  Test: blob_create_loop ...passed
+  Test: blob_create_fail ...passed
+  Test: blob_create_internal ...passed
+  Test: blob_create_zero_extent ...passed
+  Test: blob_snapshot ...passed
+  Test: blob_clone ...passed
+  Test: blob_inflate ...passed
+  Test: blob_delete ...passed
+  Test: blob_resize_test ...passed
+  Test: channel_ops ...passed
+  Test: blob_super ...passed
+  Test: blob_rw_verify_iov ...passed
+  Test: blob_unmap ...passed
+  Test: blob_iter ...passed
+  Test: blob_parse_md ...passed
+  Test: bs_load_pending_removal ...passed
+  Test: bs_unload ...passed
+  Test: bs_usable_clusters ...passed
+  Test: blob_crc ...passed
+  Test: blob_flags ...passed
+  Test: bs_version ...passed
+  Test: blob_set_xattrs_test ...passed
+  Test: blob_thin_prov_alloc ...passed
+  Test: blob_insert_cluster_msg_test ...passed
+  Test: blob_thin_prov_rw ...passed
+  Test: blob_thin_prov_rle ...passed
+  Test: blob_thin_prov_rw_iov ...passed
+  Test: blob_snapshot_rw ...passed
+  Test: blob_snapshot_rw_iov ...passed
+  Test: blob_inflate_rw ...passed
+  Test: blob_snapshot_freeze_io ...passed
+  Test: blob_operation_split_rw ...passed
+  Test: blob_operation_split_rw_iov ...passed
+  Test: blob_simultaneous_operations ...passed
+  Test: blob_persist_test ...passed
+  Test: blob_decouple_snapshot ...passed
+  Test: blob_seek_io_unit ...passed
+  Test: blob_nested_freezes ...passed
+Suite: blob_blob_copy_extent
+  Test: blob_write ...passed
+  Test: blob_read ...passed
+  Test: blob_rw_verify ...passed
+  Test: blob_rw_verify_iov_nomem ...passed
+  Test: blob_rw_iov_read_only ...passed
+  Test: blob_xattr ...passed
+  Test: blob_dirty_shutdown ...passed
+  Test: blob_is_degraded ...passed
+Suite: blob_esnap_bs_copy_extent
+  Test: blob_esnap_create ...passed
+  Test: blob_esnap_thread_add_remove ...passed
+  Test: blob_esnap_clone_snapshot ...passed
+  Test: blob_esnap_clone_inflate ...passed
+  Test: blob_esnap_clone_decouple ...passed
+  Test: blob_esnap_clone_reload ...passed
+  Test: blob_esnap_hotplug ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites     16     16    n/a      0        0
+               tests    340    340    340      0        0
+             asserts  91929  91929  91929      0      n/a
+
+Elapsed time =    5.058 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: blob_bdev
+  Test: create_bs_dev ...passed
+  Test: create_bs_dev_ro ...passed
+  Test: create_bs_dev_rw ...passed
+  Test: claim_bs_dev ...passed
+  Test: claim_bs_dev_ro ...passed
+  Test: deferred_destroy_refs ...passed
+  Test: deferred_destroy_channels ...passed
+  Test: deferred_destroy_threads ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts    119    119    119      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: tree
+  Test: blobfs_tree_op_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     27     27     27      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: blobfs_async_ut
+  Test: fs_init ...passed
+  Test: fs_open ...passed
+  Test: fs_create ...passed
+  Test: fs_truncate ...passed
+  Test: fs_rename ...passed
+  Test: fs_rw_async ...passed
+  Test: fs_writev_readv_async ...passed
+  Test: tree_find_buffer_ut ...passed
+  Test: channel_ops ...passed
+  Test: channel_ops_sync ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     10     10     10      0        0
+             asserts    292    292    292      0      n/a
+
+Elapsed time =    0.104 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: blobfs_sync_ut
+  Test: cache_read_after_write ...passed
+  Test: file_length ...passed
+  Test: append_write_to_extend_blob ...passed
+  Test: partial_buffer ...passed
+  Test: cache_write_null_buffer ...passed
+  Test: fs_create_sync ...passed
+  Test: fs_rename_sync ...passed
+  Test: cache_append_no_cache ...passed
+  Test: fs_delete_file_without_close ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      9      9      9      0        0
+             asserts    345    345    345      0      n/a
+
+Elapsed time =    0.217 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: blobfs_bdev_ut
+  Test: spdk_blobfs_bdev_detect_test ...passed
+  Test: spdk_blobfs_bdev_create_test ...passed
+  Test: spdk_blobfs_bdev_mount_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts      9      9      9      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_blob_blobfs
+************************************
+************************************
+START TEST unittest_event
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: app_suite
+  Test: test_spdk_app_parse_args ...app_ut [options]
+options:
+ -c, --config <config>     JSON config file (default none)
+     --json <config>       JSON config file (default none)
+     --json-ignore-init-errors
+                           don't exit on invalid config entry
+ -d, --limit-coredump      do not set max coredump size to RLIM_INFINITY
+ -g, --single-file-segments
+                           force creating just one hugetlbfs file
+ -h, --help                show this usage
+ -i, --shm-id <id>         shared memory ID (optional)
+ -m, --cpumask <mask or list>    core mask (like 0xF) or core list of '[]' embraced (like [0,1,10]) for DPDK
+     --lcores <list>       lcore to CPU mapping list. The list is in the format:
+                           <lcores[@CPUs]>[<,lcores[@CPUs]>...]
+                           lcores and cpus list are grouped by '(' and ')', e.g '--lcores "(5-7)@(10-12)"'
+                           Within the group, '-' is used for range separator,
+                           ',' is used for single number separator.
+                           '( )' can be omitted for single element group,
+                           '@' can be omitted if cpus and lcores have the same value
+ -n, --mem-channels <num>  channel number of memory channels used for DPDK
+ -p, --main-core <id>      main (primary) core for DPDK
+ -r, --rpc-socket <path>   RPC listen address (default /var/tmp/spdk.sock)
+ -s, --mem-size <size>     memory size in MB for DPDK (default: 0MB)
+     --disable-cpumask-locks    Disable CPU core lock files.
+     --silence-noticelog   disable notice level logging to stderr
+     --msg-mempool-size <size>  global message memory pool size in count (default: 262143)
+ -u, --no-pci              disable PCI access
+     --wait-for-rpc        wait for RPCs to initialize subsystems
+     --max-delay <num>     maximum reactor delay (in microseconds)
+ -B, --pci-blocked <bdf>   pci addr to block (can be used more than once)
+ -A, --pci-allowed <bdf>   pci addr to allow (-B and -A cannot be used at the same time)
+ -R, --huge-unlink         unlink huge files after initialization
+ -v, --version             print SPDK version
+     --huge-dir <path>     use a specific hugetlbfs mount to reserve memory from
+     --iova-mode <pa/va>   set IOVA mode ('pa' for IOVA_PA and 'va' for IOVA_VA)
+     --base-virtaddr <addr>      the base virtual address for DPDK (default: 0x200000000000)
+     --num-trace-entries <num>   number of trace entries for each core, must be power of 2, setting 0 to disable trace (default 32768)
+                                 Tracepoints vary in size and can use more than one trace entry.
+     --rpcs-allowed	   comma-separated list of permitted RPCS
+     --env-context         Opaque context for use of the env implementation
+     --vfio-vf-token       VF token (UUID) shared between SR-IOV PF and VFs for vfio_pci driver
+ -L, --logflag <flag>    enable log flag (all, json_util, log, rpc, thread, trace)
+ -e, --tpoint-group <group-name>[:<tpoint_mask>]
+                           group_name - tracepoint group name for spdk trace buffers (thread, all)
+                           tpoint_mask - tracepoint mask for enabling individual tpoints inside a tracepoint group. First tpoint inside a group can be enabled by setting tpoint_mask to 1 (e.g. bdev:0x1).
+                            Groups and masks can be combined (e.g. thread,bdev:0x1).
+                            All available tpoints can be found in /include/spdk_internal/trace_defs.h
+app_ut [options]
+options:
+ -c, --config <config>     JSON config file (default none)
+     --json <config>       JSON config file (default none)
+     --json-ignore-init-errors
+                           don't exit on invalid config entry
+ -d, --limit-coredump      do not set max coredump size to RLIM_INFINITY
+ -g, --single-file-segments
+                           force creating just one hugetlbfs file
+ -h, --help                show this usage
+ -i, --shm-id <id>         shared memory ID (optional)
+ -m, --cpumask <mask or list>    core mask (like 0xF) or core list of '[]' embraced (like [0,1,10]) for DPDK
+     --lcores <list>       lcore to CPU mapping list. The list is in the format:
+                           <lcores[@CPUs]>[<,lcores[@CPUs]>...]
+                           lcores and cpus list are grouped by '(' and ')', e.g '--lcores "(5-7)@(10-12)"'
+                           Within the group, '-' is used for range separator,
+                           ',' is used for single number separator.
+                           '( )' can be omitted for single element group,
+                           '@' can be omitted if cpus and lcores have the same value
+ -n, --mem-channels <num>  channel number of memory channels used for DPDK
+ -p, --main-core <id>      main (primary) core for DPDK
+ -r, --rpc-socket <path>   RPC listen address (default /var/tmp/spdk.sock)
+ -s, --mem-size <size>     memory size in MB for DPDK (default: 0MB)
+     --disable-cpumask-locks    Disable CPU core lock files.
+     --silence-noticelog   disable notice level logging to stderr
+     --msg-mempool-size <size>  global message memory pool size in count (default: 262143)
+ -u, --no-pci              disable PCI access
+     --wait-for-rpc        wait for RPCs to initialize subsystems
+     --max-delay <num>     maximum reactor delay (in microseconds)
+ -B, --pci-blocked <bdf>   pci addr to block (can be used more than once)
+ -A, --pci-allowed <bdf>   pci addr to allow (-B and -A cannot be used at the same time)
+ -R, --huge-unlink         unlink huge files after initialization
+ -v, --version             print SPDK version
+     --huge-dir <path>     use a specific hugetlbfs mount to reserve memory from
+     --iova-mode <pa/va>   set IOVA mode ('pa' for IOVA_PA and 'va' for IOVA_VA)
+     --base-virtaddr <addr>      the base virtual address for DPDK (default: 0x200000000000)
+     --num-trace-entries <num>   number of trace entries for each core, must be power of 2, setting 0 to disable trace (default 32768)
+                                 Tracepoints vary in size and can use more than one trace entry.
+     --rpcs-allowed	   comma-separated list of permitted RPCS
+     --env-context         Opaque context for use of the env implementation
+     --vfio-vf-token       VF token (UUID) shared between SR-IOV PF and VFs for vfio_pci driver
+ -L, --logflag <flag>    enable log flag (all, json_util, log, rpc, thread, trace)
+ -e, --tpoint-group <group-name>[:<tpoint_mask>]
+                           group_name - tracepoint group name for spdk trace buffers (thread, all)
+                           tpoint_mask - tracepoint mask for enabling individual tpoints inside a tracepoint group. First tpoint inside a group can be enabled by setting tpoint_mask to 1 (e.g. bdev:0x1).
+                            Groups and masks can be combined (e.g. thread,bdev:0x1).
+                            All available tpoints can be found in /include/spdk_internal/trace_defs.h
+app_ut [options]
+options:
+ -c, --config <config>     JSON config file (default none)
+     --json <config>       JSON config file (default none)
+     --json-ignore-init-errors
+                           don't exit on invalid config entry
+ -d, --limit-coredump      do not set max coredump size to RLIM_INFINITY
+ -g, --single-file-segments
+                           force creating just one hugetlbfs file
+ -h, --help                show this usage
+ -i, --shm-id <id>         shared memory ID (optional)
+ -m, --cpumask <mask or list>    core mask (like 0xF) or core list of '[]' embraced (like [0,1,10]) for DPDK
+     --lcores <list>       lcore to CPU mapping list. The list is in the format:
+                           <lcores[@CPUs]>[<,lcores[@CPUs]>...]
+                           lcores and cpus list are grouped by '(' and ')', e.g '--lcores "(5-7)@(10-12)"'
+                           Within the group, '-' is used for range separator,
+                           ',' is used for single number separator.
+                           '( )' can be omitted for single element group,
+                           '@' can be omitted if cpus and lcores have the same value
+ -n, --mem-channels <num>  channel number of memory channels used for DPDK
+ -p, --main-core <id>      main (primary) core for DPDK
+ -r, --rpc-socket <path>   RPC listen address (default /var/tmp/spdk.sock)
+ -s, --mem-size <size>     memory size in MB for DPDK (default: 0MB)
+     --disable-cpumask-locks    Disable CPU core lock files.
+     --silence-noticelog   disable notice level logging to stderr
+     --msg-mempool-size <size>  global message memory pool size in count (default: 262143)
+ -u, --no-pci              disable PCI access
+     --wait-for-rpc        wait for RPCs to initialize subsystems
+     --max-delay <num>     maximum reactor delay (in microseconds)
+ -B, --pci-blocked <bdf>   pci addr to block (can be used more than once)
+ -A, --pci-allowed <bdf>   pci addr to allow (-B and -A cannot be used at the same time)
+ -R, --huge-unlink         unlink huge files after initialization
+ -v, --version             print SPDK version
+     --huge-dir <path>     use a specific hugetlbfs mount to reserve memory from
+     --iova-mode <pa/va>   set IOVA mode ('pa' for IOVA_PA and 'va' for IOVA_VA)
+     --base-virtaddr <addr>      the base virtual address for DPDK (default: 0x200000000000)
+     --num-trace-entries <num>   number of trace entries for each core, must be power of 2, setting 0 to disable trace (default 32768)
+                                 Tracepoints vary in size and can use more than one trace entry.
+     --rpcs-allowed	   comma-separated list of permitted RPCS
+     --env-context         Opaque context for use of the env implementation
+     --vfio-vf-token       VF token (UUID) shared between SR-IOV PF and VFs for vfio_pci driver
+ -L, --logflag <flag>    enable log flag (all, json_util, log, rpc, thread, trace)
+ -e, --tpoint-group <group-name>[:<tpoint_mask>]
+                           group_name - tracepoint group name for spdk trace buffers (thread, all)
+                           tpoint_mask - tracepoint mask for enabling individual tpoints inside a tracepoint group. First tpoint inside a group can be enabled by setting tpoint_mask to 1 (e.g. bdev:0x1).
+                            Groups and masks can be combined (e.g. thread,bdev:0x1).
+                            All available tpoints can be found in /include/spdk_internal/trace_defs.h
+passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      8      8      8      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: app_suite
+  Test: test_create_reactor ...passed
+  Test: test_init_reactors ...passed
+  Test: test_event_call ...passed
+  Test: test_schedule_thread ...passed
+  Test: test_reschedule_thread ...passed
+  Test: test_bind_thread ...passed
+  Test: test_for_each_reactor ...passed
+  Test: test_reactor_stats ...passed
+  Test: test_scheduler ...passed
+  Test: test_governor ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     10     10     10      0        0
+             asserts    344    344    344      0      n/a
+
+Elapsed time =    0.002 seconds
+************************************
+END TEST unittest_event
+************************************
+************************************
+START TEST unittest_ftl
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_band_suite
+  Test: test_band_block_offset_from_addr_base ...passed
+  Test: test_band_block_offset_from_addr_offset ...passed
+  Test: test_band_addr_from_block_offset ...passed
+  Test: test_band_set_addr ...passed
+  Test: test_invalidate_addr ...passed
+  Test: test_next_xfer_addr ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts  30356  30356  30356      0      n/a
+
+Elapsed time =    0.019 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_bitmap
+  Test: test_ftl_bitmap_create ...passed
+  Test: test_ftl_bitmap_get ...passed
+  Test: test_ftl_bitmap_set ...passed
+  Test: test_ftl_bitmap_clear ...passed
+  Test: test_ftl_bitmap_find_first_set ...passed
+  Test: test_ftl_bitmap_find_first_clear ...passed
+  Test: test_ftl_bitmap_count_set ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      7      7      7      0        0
+             asserts    137    137    137      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_io_suite
+  Test: test_completion ...passed
+  Test: test_multiple_ios ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     47     47     47      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_mngt
+  Test: test_next_step ...passed
+  Test: test_continue_step ...passed
+  Test: test_get_func_and_step_cntx_alloc ...passed
+  Test: test_fail_step ...passed
+  Test: test_mngt_call_and_call_rollback ...passed
+  Test: test_nested_process_failure ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts    176    176    176      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_mempool
+  Test: test_ftl_mempool_create ...passed
+  Test: test_ftl_mempool_get_put ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     36     36     36      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_addr64_suite
+  Test: test_addr_cached ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts   1536   1536   1536      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_sb
+  Test: test_sb_crc_v2 ...passed
+  Test: test_sb_crc_v3 ...passed
+  Test: test_sb_v3_md_layout ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts     36     36     36      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ftl_sb
+  Test: test_l2p_upgrade ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     65     65     65      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_ftl
+************************************
+************************************
+START TEST unittest_accel
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: accel_sequence
+  Test: test_sequence_fill_copy ...passed
+  Test: test_sequence_abort ...passed
+  Test: test_sequence_append_error ...passed
+  Test: test_sequence_completion_error ...passed
+  Test: test_sequence_decompress ...passed
+  Test: test_sequence_reverse ...passed
+  Test: test_sequence_copy_elision ...passed
+  Test: test_sequence_accel_buffers ...passed
+  Test: test_sequence_memory_domain ...passed
+  Test: test_sequence_module_memory_domain ...passed
+  Test: test_sequence_crypto ...passed
+  Test: test_sequence_driver ...passed
+  Test: test_sequence_same_iovs ...passed
+  Test: test_sequence_crc32 ...passed
+Suite: accel
+  Test: test_spdk_accel_task_complete ...passed
+  Test: test_get_task ...passed
+  Test: test_spdk_accel_submit_copy ...passed
+  Test: test_spdk_accel_submit_dualcast ...passed
+  Test: test_spdk_accel_submit_compare ...passed
+  Test: test_spdk_accel_submit_fill ...passed
+  Test: test_spdk_accel_submit_crc32c ...passed
+  Test: test_spdk_accel_submit_crc32cv ...passed
+  Test: test_spdk_accel_submit_copy_crc32c ...passed
+  Test: test_spdk_accel_submit_xor ...passed
+  Test: test_spdk_accel_module_find_by_name ...passed
+  Test: test_spdk_accel_module_register ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      2      2    n/a      0        0
+               tests     26     26     26      0        0
+             asserts    807    807    807      0      n/a
+
+Elapsed time =    0.005 seconds
+************************************
+END TEST unittest_accel
+************************************
+************************************
+START TEST unittest_ioat
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: ioat
+  Test: ioat_state_check ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     32     32     32      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_ioat
+************************************
+************************************
+START TEST unittest_iscsi
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: conn_suite
+  Test: read_task_split_in_order_case ...passed
+  Test: read_task_split_reverse_order_case ...passed
+  Test: propagate_scsi_error_status_for_split_read_tasks ...passed
+  Test: process_non_read_task_completion_test ...passed
+  Test: free_tasks_on_connection ...passed
+  Test: free_tasks_with_queued_datain ...passed
+  Test: abort_queued_datain_task_test ...passed
+  Test: abort_queued_datain_tasks_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts    230    230    230      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: iscsi_suite
+  Test: param_negotiation_test ...passed
+  Test: list_negotiation_test ...passed
+  Test: parse_valid_test ...passed
+  Test: parse_invalid_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      4      4      4      0        0
+             asserts    161    161    161      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: iscsi_target_node_suite
+  Test: add_lun_test_cases ...passed
+  Test: allow_any_allowed ...passed
+  Test: allow_ipv6_allowed ...passed
+  Test: allow_ipv6_denied ...passed
+  Test: allow_ipv6_invalid ...passed
+  Test: allow_ipv4_allowed ...passed
+  Test: allow_ipv4_denied ...passed
+  Test: allow_ipv4_invalid ...passed
+  Test: node_access_allowed ...passed
+  Test: node_access_denied_by_empty_netmask ...passed
+  Test: node_access_multi_initiator_groups_cases ...passed
+  Test: allow_iscsi_name_multi_maps_case ...passed
+  Test: chap_param_test_cases ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     13     13     13      0        0
+             asserts     50     50     50      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: iscsi_suite
+  Test: op_login_check_target_test ...passed
+  Test: op_login_session_normal_test ...passed
+  Test: maxburstlength_test ...passed
+  Test: underflow_for_read_transfer_test ...passed
+  Test: underflow_for_zero_read_transfer_test ...passed
+  Test: underflow_for_request_sense_test ...passed
+  Test: underflow_for_check_condition_test ...passed
+  Test: add_transfer_task_test ...passed
+  Test: get_transfer_task_test ...passed
+  Test: del_transfer_task_test ...passed
+  Test: clear_all_transfer_tasks_test ...passed
+  Test: build_iovs_test ...passed
+  Test: build_iovs_with_md_test ...passed
+  Test: pdu_hdr_op_login_test ...passed
+  Test: pdu_hdr_op_text_test ...passed
+  Test: pdu_hdr_op_logout_test ...passed
+  Test: pdu_hdr_op_scsi_test ...passed
+  Test: pdu_hdr_op_task_mgmt_test ...passed
+  Test: pdu_hdr_op_nopout_test ...passed
+  Test: pdu_hdr_op_data_test ...passed
+  Test: empty_text_with_cbit_test ...passed
+  Test: pdu_payload_read_test ...passed
+  Test: data_out_pdu_sequence_test ...passed
+  Test: immediate_data_and_data_out_pdu_sequence_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     24     24     24      0        0
+             asserts 150253 150253 150253      0      n/a
+
+Elapsed time =    0.002 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: init_grp_suite
+  Test: create_initiator_group_success_case ...passed
+  Test: find_initiator_group_success_case ...passed
+  Test: register_initiator_group_twice_case ...passed
+  Test: add_initiator_name_success_case ...passed
+  Test: add_initiator_name_fail_case ...passed
+  Test: delete_all_initiator_names_success_case ...passed
+  Test: add_netmask_success_case ...passed
+  Test: add_netmask_fail_case ...passed
+  Test: delete_all_netmasks_success_case ...passed
+  Test: initiator_name_overwrite_all_to_any_case ...passed
+  Test: netmask_overwrite_all_to_any_case ...passed
+  Test: add_delete_initiator_names_case ...passed
+  Test: add_duplicated_initiator_names_case ...passed
+  Test: delete_nonexisting_initiator_names_case ...passed
+  Test: add_delete_netmasks_case ...passed
+  Test: add_duplicated_netmasks_case ...passed
+  Test: delete_nonexisting_netmasks_case ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     17     17     17      0        0
+             asserts    108    108    108      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: portal_grp_suite
+  Test: portal_create_ipv4_normal_case ...passed
+  Test: portal_create_ipv6_normal_case ...passed
+  Test: portal_create_ipv4_wildcard_case ...passed
+  Test: portal_create_ipv6_wildcard_case ...passed
+  Test: portal_create_twice_case ...passed
+  Test: portal_grp_register_unregister_case ...passed
+  Test: portal_grp_register_twice_case ...passed
+  Test: portal_grp_add_delete_case ...passed
+  Test: portal_grp_add_delete_twice_case ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      9      9      9      0        0
+             asserts     44     44     44      0      n/a
+
+Elapsed time =    0.001 seconds
+************************************
+END TEST unittest_iscsi
+************************************
+************************************
+START TEST unittest_json
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: json
+  Test: test_parse_literal ...passed
+  Test: test_parse_string_simple ...passed
+  Test: test_parse_string_control_chars ...passed
+  Test: test_parse_string_utf8 ...passed
+  Test: test_parse_string_escapes_twochar ...passed
+  Test: test_parse_string_escapes_unicode ...passed
+  Test: test_parse_number ...passed
+  Test: test_parse_array ...passed
+  Test: test_parse_object ...passed
+  Test: test_parse_nesting ...passed
+  Test: test_parse_comment ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     11     11     11      0        0
+             asserts   1516   1516   1516      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: json
+  Test: test_strequal ...passed
+  Test: test_num_to_uint16 ...passed
+  Test: test_num_to_int32 ...passed
+  Test: test_num_to_uint64 ...passed
+  Test: test_decode_object ...passed
+  Test: test_decode_array ...passed
+  Test: test_decode_bool ...passed
+  Test: test_decode_uint16 ...passed
+  Test: test_decode_int32 ...passed
+  Test: test_decode_uint32 ...passed
+  Test: test_decode_uint64 ...passed
+  Test: test_decode_string ...passed
+  Test: test_find ...passed
+  Test: test_find_array ...passed
+  Test: test_iterating ...passed
+  Test: test_free_object ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     16     16     16      0        0
+             asserts    230    230    230      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: json
+  Test: test_write_literal ...passed
+  Test: test_write_string_simple ...passed
+  Test: test_write_string_escapes ...passed
+  Test: test_write_string_utf16le ...passed
+  Test: test_write_number_int32 ...passed
+  Test: test_write_number_uint32 ...passed
+  Test: test_write_number_uint128 ...passed
+  Test: test_write_string_number_uint128 ...passed
+  Test: test_write_number_int64 ...passed
+  Test: test_write_number_uint64 ...passed
+  Test: test_write_number_double ...passed
+  Test: test_write_array ...passed
+  Test: test_write_object ...passed
+  Test: test_write_nesting ...passed
+  Test: test_write_val ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     15     15     15      0        0
+             asserts    912    912    912      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: jsonrpc
+  Test: test_parse_request ...passed
+  Test: test_parse_request_streaming ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts    289    289    289      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_json
+************************************
+************************************
+START TEST unittest_rpc
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: rpc
+  Test: test_jsonrpc_handler ...passed
+  Test: test_spdk_rpc_is_method_allowed ...passed
+  Test: test_rpc_get_methods ...passed
+  Test: test_rpc_spdk_get_version ...passed
+  Test: test_spdk_rpc_listen_close ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     20     20     20      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_rpc
+************************************
+************************************
+START TEST unittest_notify
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: app_suite
+  Test: notify ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     13     13     13      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_notify
+************************************
+************************************
+START TEST unittest_nvme
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme
+  Test: test_opc_data_transfer ...passed
+  Test: test_spdk_nvme_transport_id_parse_trtype ...passed
+  Test: test_spdk_nvme_transport_id_parse_adrfam ...passed
+  Test: test_trid_parse_and_compare ...passed
+  Test: test_trid_trtype_str ...passed
+  Test: test_trid_adrfam_str ...passed
+  Test: test_nvme_ctrlr_probe ...passed
+  Test: test_spdk_nvme_probe ...passed
+  Test: test_spdk_nvme_connect ...passed
+  Test: test_nvme_ctrlr_probe_internal ...passed
+  Test: test_nvme_init_controllers ...passed
+  Test: test_nvme_driver_init ...passed
+  Test: test_spdk_nvme_detach ...passed
+  Test: test_nvme_completion_poll_cb ...passed
+  Test: test_nvme_user_copy_cmd_complete ...passed
+  Test: test_nvme_allocate_request_null ...passed
+  Test: test_nvme_allocate_request ...passed
+  Test: test_nvme_free_request ...passed
+  Test: test_nvme_allocate_request_user_copy ...passed
+  Test: test_nvme_robust_mutex_init_shared ...passed
+  Test: test_nvme_request_check_timeout ...passed
+  Test: test_nvme_wait_for_completion ...passed
+  Test: test_spdk_nvme_parse_func ...passed
+  Test: test_spdk_nvme_detach_async ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     24     24     24      0        0
+             asserts    313    313    313      0      n/a
+
+Elapsed time =    0.004 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ctrlr
+  Test: test_nvme_ctrlr_init_en_1_rdy_0 ...passed
+  Test: test_nvme_ctrlr_init_en_1_rdy_1 ...passed
+  Test: test_nvme_ctrlr_init_en_0_rdy_0 ...passed
+  Test: test_nvme_ctrlr_init_en_0_rdy_1 ...passed
+  Test: test_nvme_ctrlr_init_en_0_rdy_0_ams_rr ...passed
+  Test: test_nvme_ctrlr_init_en_0_rdy_0_ams_wrr ...passed
+  Test: test_nvme_ctrlr_init_en_0_rdy_0_ams_vs ...passed
+  Test: test_nvme_ctrlr_init_delay ...passed
+  Test: test_alloc_io_qpair_rr_1 ...passed
+  Test: test_ctrlr_get_default_ctrlr_opts ...passed
+  Test: test_ctrlr_get_default_io_qpair_opts ...passed
+  Test: test_alloc_io_qpair_wrr_1 ...passed
+  Test: test_alloc_io_qpair_wrr_2 ...passed
+  Test: test_spdk_nvme_ctrlr_update_firmware ...passed
+  Test: test_nvme_ctrlr_fail ...passed
+  Test: test_nvme_ctrlr_construct_intel_support_log_page_list ...passed
+  Test: test_nvme_ctrlr_set_supported_features ...passed
+  Test: test_spdk_nvme_ctrlr_doorbell_buffer_config ...passed
+  Test: test_nvme_ctrlr_test_active_ns ...passed
+  Test: test_nvme_ctrlr_test_active_ns_error_case ...passed
+  Test: test_spdk_nvme_ctrlr_reconnect_io_qpair ...passed
+  Test: test_spdk_nvme_ctrlr_set_trid ...passed
+  Test: test_nvme_ctrlr_init_set_nvmf_ioccsz ...passed
+  Test: test_nvme_ctrlr_init_set_num_queues ...passed
+  Test: test_nvme_ctrlr_init_set_keep_alive_timeout ...passed
+  Test: test_alloc_io_qpair_fail ...passed
+  Test: test_nvme_ctrlr_add_remove_process ...passed
+  Test: test_nvme_ctrlr_set_arbitration_feature ...passed
+  Test: test_nvme_ctrlr_set_state ...passed
+  Test: test_nvme_ctrlr_active_ns_list_v0 ...passed
+  Test: test_nvme_ctrlr_active_ns_list_v2 ...passed
+  Test: test_nvme_ctrlr_ns_mgmt ...passed
+  Test: test_nvme_ctrlr_reset ...passed
+  Test: test_nvme_ctrlr_aer_callback ...passed
+  Test: test_nvme_ctrlr_ns_attr_changed ...passed
+  Test: test_nvme_ctrlr_identify_namespaces_iocs_specific_next ...passed
+  Test: test_nvme_ctrlr_set_supported_log_pages ...passed
+  Test: test_nvme_ctrlr_set_intel_supported_log_pages ...passed
+  Test: test_nvme_ctrlr_parse_ana_log_page ...passed
+  Test: test_nvme_ctrlr_ana_resize ...passed
+  Test: test_nvme_ctrlr_get_memory_domains ...passed
+  Test: test_nvme_transport_ctrlr_ready ...passed
+  Test: test_nvme_ctrlr_disable ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     43     43     43      0        0
+             asserts  10418  10418  10418      0      n/a
+
+Elapsed time =    0.067 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ctrlr_cmd
+  Test: test_get_log_pages ...passed
+  Test: test_set_feature_cmd ...passed
+  Test: test_set_feature_ns_cmd ...passed
+  Test: test_get_feature_cmd ...passed
+  Test: test_get_feature_ns_cmd ...passed
+  Test: test_abort_cmd ...passed
+  Test: test_set_host_id_cmds ...passed
+  Test: test_io_cmd_raw_no_payload_build ...passed
+  Test: test_io_raw_cmd ...passed
+  Test: test_io_raw_cmd_with_md ...passed
+  Test: test_namespace_attach ...passed
+  Test: test_namespace_detach ...passed
+  Test: test_namespace_create ...passed
+  Test: test_namespace_delete ...passed
+  Test: test_doorbell_buffer_config ...passed
+  Test: test_format_nvme ...passed
+  Test: test_fw_commit ...passed
+  Test: test_fw_image_download ...passed
+  Test: test_sanitize ...passed
+  Test: test_directive ...passed
+  Test: test_nvme_request_add_abort ...passed
+  Test: test_spdk_nvme_ctrlr_cmd_abort ...passed
+  Test: test_nvme_ctrlr_cmd_identify ...passed
+  Test: test_spdk_nvme_ctrlr_cmd_security_receive_send ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     24     24     24      0        0
+             asserts    198    198    198      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ctrlr_cmd
+  Test: test_geometry_cmd ...passed
+  Test: test_spdk_nvme_ctrlr_is_ocssd_supported ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts      7      7      7      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme
+  Test: test_nvme_ns_construct ...passed
+  Test: test_nvme_ns_uuid ...passed
+  Test: test_nvme_ns_csi ...passed
+  Test: test_nvme_ns_data ...passed
+  Test: test_nvme_ns_set_identify_data ...passed
+  Test: test_spdk_nvme_ns_get_values ...passed
+  Test: test_spdk_nvme_ns_is_active ...passed
+  Test: spdk_nvme_ns_supports ...passed
+  Test: test_nvme_ns_has_supported_iocs_specific_data ...passed
+  Test: test_nvme_ctrlr_identify_ns_iocs_specific ...passed
+  Test: test_nvme_ctrlr_identify_id_desc ...passed
+  Test: test_nvme_ns_find_id_desc ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     12     12     12      0        0
+             asserts     83     83     83      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ns_cmd
+  Test: split_test ...passed
+  Test: split_test2 ...passed
+  Test: split_test3 ...passed
+  Test: split_test4 ...passed
+  Test: test_nvme_ns_cmd_flush ...passed
+  Test: test_nvme_ns_cmd_dataset_management ...passed
+  Test: test_nvme_ns_cmd_copy ...passed
+  Test: test_io_flags ...passed
+  Test: test_nvme_ns_cmd_write_zeroes ...passed
+  Test: test_nvme_ns_cmd_write_uncorrectable ...passed
+  Test: test_nvme_ns_cmd_reservation_register ...passed
+  Test: test_nvme_ns_cmd_reservation_release ...passed
+  Test: test_nvme_ns_cmd_reservation_acquire ...passed
+  Test: test_nvme_ns_cmd_reservation_report ...passed
+  Test: test_cmd_child_request ...passed
+  Test: test_nvme_ns_cmd_readv ...passed
+  Test: test_nvme_ns_cmd_read_with_md ...passed
+  Test: test_nvme_ns_cmd_writev ...passed
+  Test: test_nvme_ns_cmd_write_with_md ...passed
+  Test: test_nvme_ns_cmd_zone_append_with_md ...passed
+  Test: test_nvme_ns_cmd_zone_appendv_with_md ...passed
+  Test: test_nvme_ns_cmd_comparev ...passed
+  Test: test_nvme_ns_cmd_compare_and_write ...passed
+  Test: test_nvme_ns_cmd_compare_with_md ...passed
+  Test: test_nvme_ns_cmd_comparev_with_md ...passed
+  Test: test_nvme_ns_cmd_setup_request ...passed
+  Test: test_spdk_nvme_ns_cmd_readv_with_md ...passed
+  Test: test_spdk_nvme_ns_cmd_writev_ext ...passed
+  Test: test_spdk_nvme_ns_cmd_readv_ext ...passed
+  Test: test_nvme_ns_cmd_verify ...passed
+  Test: test_nvme_ns_cmd_io_mgmt_send ...passed
+  Test: test_nvme_ns_cmd_io_mgmt_recv ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     32     32     32      0        0
+             asserts    550    550    550      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ns_cmd
+  Test: test_nvme_ocssd_ns_cmd_vector_reset ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_reset_single_entry ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_read_with_md ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_read_with_md_single_entry ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_read ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_read_single_entry ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_write_with_md ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_write_with_md_single_entry ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_write ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_write_single_entry ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_copy ...passed
+  Test: test_nvme_ocssd_ns_cmd_vector_copy_single_entry ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     12     12     12      0        0
+             asserts    123    123    123      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_qpair
+  Test: test3 ...passed
+  Test: test_ctrlr_failed ...passed
+  Test: struct_packing ...passed
+  Test: test_nvme_qpair_process_completions ...passed
+  Test: test_nvme_completion_is_retry ...passed
+  Test: test_nvme_qpair_add_cmd_error_injection ...passed
+  Test: test_nvme_qpair_submit_request ...passed
+  Test: test_nvme_qpair_resubmit_request_with_transport_failed ...passed
+  Test: test_nvme_qpair_manual_complete_request ...passed
+  Test: test_nvme_qpair_init_deinit ...passed
+  Test: test_nvme_get_sgl_print_info ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     11     11     11      0        0
+             asserts    149    149    149      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_pcie
+  Test: test_prp_list_append ...passed
+  Test: test_nvme_pcie_hotplug_monitor ...passed
+  Test: test_shadow_doorbell_update ...passed
+  Test: test_build_contig_hw_sgl_request ...passed
+  Test: test_nvme_pcie_qpair_build_metadata ...passed
+  Test: test_nvme_pcie_qpair_build_prps_sgl_request ...passed
+  Test: test_nvme_pcie_qpair_build_hw_sgl_request ...passed
+  Test: test_nvme_pcie_qpair_build_contig_request ...passed
+  Test: test_nvme_pcie_ctrlr_regs_get_set ...passed
+  Test: test_nvme_pcie_ctrlr_map_unmap_cmb ...passed
+  Test: test_nvme_pcie_ctrlr_map_io_cmb ...passed
+  Test: test_nvme_pcie_ctrlr_map_unmap_pmr ...passed
+  Test: test_nvme_pcie_ctrlr_config_pmr ...passed
+  Test: test_nvme_pcie_ctrlr_map_io_pmr ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     14     14     14      0        0
+             asserts    235    235    235      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_ns_cmd
+  Test: nvme_poll_group_create_test ...passed
+  Test: nvme_poll_group_add_remove_test ...passed
+  Test: nvme_poll_group_process_completions ...passed
+  Test: nvme_poll_group_destroy_test ...passed
+  Test: nvme_poll_group_get_free_stats ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     75     75     75      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_quirks
+  Test: test_nvme_quirks_striping ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      5      5      5      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_tcp
+  Test: test_nvme_tcp_pdu_set_data_buf ...passed
+  Test: test_nvme_tcp_build_iovs ...passed
+  Test: test_nvme_tcp_build_sgl_request ...passed
+  Test: test_nvme_tcp_pdu_set_data_buf_with_md ...passed
+  Test: test_nvme_tcp_build_iovs_with_md ...passed
+  Test: test_nvme_tcp_req_complete_safe ...passed
+  Test: test_nvme_tcp_req_get ...passed
+  Test: test_nvme_tcp_req_init ...passed
+  Test: test_nvme_tcp_qpair_capsule_cmd_send ...passed
+  Test: test_nvme_tcp_qpair_write_pdu ...passed
+  Test: test_nvme_tcp_qpair_set_recv_state ...passed
+  Test: test_nvme_tcp_alloc_reqs ...passed
+  Test: test_nvme_tcp_parse_addr ...passed
+  Test: test_nvme_tcp_qpair_send_h2c_term_req ...passed
+  Test: test_nvme_tcp_pdu_ch_handle ...passed
+  Test: test_nvme_tcp_qpair_connect_sock ...passed
+  Test: test_nvme_tcp_qpair_icreq_send ...passed
+  Test: test_nvme_tcp_c2h_payload_handle ...passed
+  Test: test_nvme_tcp_icresp_handle ...passed
+  Test: test_nvme_tcp_pdu_payload_handle ...passed
+  Test: test_nvme_tcp_capsule_resp_hdr_handle ...passed
+  Test: test_nvme_tcp_ctrlr_connect_qpair ...passed
+  Test: test_nvme_tcp_ctrlr_disconnect_qpair ...passed
+  Test: test_nvme_tcp_ctrlr_create_io_qpair ...passed
+  Test: test_nvme_tcp_ctrlr_delete_io_qpair ...passed
+  Test: test_nvme_tcp_poll_group_get_stats ...passed
+  Test: test_nvme_tcp_ctrlr_construct ...passed
+  Test: test_nvme_tcp_qpair_submit_request ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     28     28     28      0        0
+             asserts    584    584    584      0      n/a
+
+Elapsed time =    0.079 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_transport
+  Test: test_nvme_get_transport ...passed
+  Test: test_nvme_transport_poll_group_connect_qpair ...passed
+  Test: test_nvme_transport_poll_group_disconnect_qpair ...passed
+  Test: test_nvme_transport_poll_group_add_remove ...passed
+  Test: test_ctrlr_get_memory_domains ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     27     27     27      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_io_msg
+  Test: test_nvme_io_msg_send ...passed
+  Test: test_nvme_io_msg_process ...passed
+  Test: test_nvme_io_msg_ctrlr_register_unregister ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts     56     56     56      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_pcie_common
+  Test: test_nvme_pcie_ctrlr_alloc_cmb ...passed
+  Test: test_nvme_pcie_qpair_construct_destroy ...passed
+  Test: test_nvme_pcie_ctrlr_cmd_create_delete_io_queue ...passed
+  Test: test_nvme_pcie_ctrlr_connect_qpair ...passed
+  Test: test_nvme_pcie_ctrlr_construct_admin_qpair ...passed
+  Test: test_nvme_pcie_poll_group_get_stats ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts    148    148    148      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_fabric
+  Test: test_nvme_fabric_prop_set_cmd ...passed
+  Test: test_nvme_fabric_prop_get_cmd ...passed
+  Test: test_nvme_fabric_get_discovery_log_page ...passed
+  Test: test_nvme_fabric_discover_probe ...passed
+  Test: test_nvme_fabric_qpair_connect ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      5      5      5      0        0
+             asserts     60     60     60      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvme_opal
+  Test: test_opal_nvme_security_recv_send_done ...passed
+  Test: test_opal_add_short_atom_header ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     22     22     22      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_nvme
+************************************
+************************************
+START TEST unittest_log
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: log
+  Test: log_test ...passed
+  Test: deprecation ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     70     70     70      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_log
+************************************
+************************************
+START TEST unittest_lvol
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: lvol
+  Test: lvs_init_unload_success ...passed
+  Test: lvs_init_destroy_success ...passed
+  Test: lvs_init_opts_success ...passed
+  Test: lvs_unload_lvs_is_null_fail ...passed
+  Test: lvs_names ...passed
+  Test: lvol_create_destroy_success ...passed
+  Test: lvol_create_fail ...passed
+  Test: lvol_destroy_fail ...passed
+  Test: lvol_close_fail ...passed
+  Test: lvol_close_success ...passed
+  Test: lvol_resize ...passed
+  Test: lvol_set_read_only ...passed
+  Test: test_lvs_load ...passed
+  Test: lvols_load ...passed
+  Test: lvol_open ...passed
+  Test: lvol_snapshot ...passed
+  Test: lvol_snapshot_fail ...passed
+  Test: lvol_clone ...passed
+  Test: lvol_clone_fail ...passed
+  Test: lvol_iter_clones ...passed
+  Test: lvol_refcnt ...passed
+  Test: lvol_names ...passed
+  Test: lvol_create_thin_provisioned ...passed
+  Test: lvol_rename ...passed
+  Test: lvs_rename ...passed
+  Test: lvol_inflate ...passed
+  Test: lvol_decouple_parent ...passed
+  Test: lvol_get_xattr ...passed
+  Test: lvol_esnap_reload ...passed
+  Test: lvol_esnap_create_bad_args ...passed
+  Test: lvol_esnap_create_delete ...passed
+  Test: lvol_esnap_load_esnaps ...passed
+  Test: lvol_esnap_missing ...passed
+  Test: lvol_esnap_hotplug ...
+	lvol_esnap_hotplug scenario 0: PASS - one missing, happy path
+	lvol_esnap_hotplug scenario 1: PASS - one missing, cb registers degraded_set
+	lvol_esnap_hotplug scenario 2: PASS - one missing, cb retuns -ENOMEM
+	lvol_esnap_hotplug scenario 3: PASS - two missing with same esnap, happy path
+	lvol_esnap_hotplug scenario 4: PASS - two missing with same esnap, first -ENOMEM
+	lvol_esnap_hotplug scenario 5: PASS - two missing with same esnap, second -ENOMEM
+	lvol_esnap_hotplug scenario 6: PASS - two missing with different esnaps, happy path
+	lvol_esnap_hotplug scenario 7: PASS - two missing with different esnaps, first still missing
+	lvol_esnap_hotplug scenario 8: PASS - three missing with same esnap, happy path
+	lvol_esnap_hotplug scenario 9: PASS - three missing with same esnap, first still missing
+	lvol_esnap_hotplug scenario 10: PASS - three missing with same esnap, first two still missing
+	lvol_esnap_hotplug scenario 11: PASS - three missing with same esnap, middle still missing
+	lvol_esnap_hotplug scenario 12: PASS - three missing with same esnap, last still missing
+passed
+  Test: lvol_get_by ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     35     35     35      0        0
+             asserts   1445   1445   1445      0      n/a
+
+Elapsed time =    0.003 seconds
+************************************
+END TEST unittest_lvol
+************************************
+************************************
+START TEST unittest_nvmf
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: test_get_log_page ...passed
+  Test: test_process_fabrics_cmd ...passed
+  Test: test_connect ...passed
+  Test: test_get_ns_id_desc_list ...passed
+  Test: test_identify_ns ...passed
+  Test: test_identify_ns_iocs_specific ...passed
+  Test: test_reservation_write_exclusive ...passed
+  Test: test_reservation_exclusive_access ...passed
+  Test: test_reservation_write_exclusive_regs_only_and_all_regs ...passed
+  Test: test_reservation_exclusive_access_regs_only_and_all_regs ...passed
+  Test: test_reservation_notification_log_page ...passed
+  Test: test_get_dif_ctx ...passed
+  Test: test_set_get_features ...passed
+  Test: test_identify_ctrlr ...passed
+  Test: test_identify_ctrlr_iocs_specific ...passed
+  Test: test_custom_admin_cmd ...passed
+  Test: test_fused_compare_and_write ...passed
+  Test: test_multi_async_event_reqs ...passed
+  Test: test_get_ana_log_page_one_ns_per_anagrp ...passed
+  Test: test_get_ana_log_page_multi_ns_per_anagrp ...passed
+  Test: test_multi_async_events ...passed
+  Test: test_rae ...passed
+  Test: test_nvmf_ctrlr_create_destruct ...passed
+  Test: test_nvmf_ctrlr_use_zcopy ...passed
+  Test: test_spdk_nvmf_request_zcopy_start ...passed
+  Test: test_zcopy_read ...passed
+  Test: test_zcopy_write ...passed
+  Test: test_nvmf_property_set ...passed
+  Test: test_nvmf_ctrlr_get_features_host_behavior_support ...passed
+  Test: test_nvmf_ctrlr_set_features_host_behavior_support ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     30     30     30      0        0
+             asserts    883    883    883      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: test_get_rw_params ...passed
+  Test: test_lba_in_range ...passed
+  Test: test_get_dif_ctx ...passed
+  Test: test_nvmf_bdev_ctrlr_identify_ns ...passed
+  Test: test_spdk_nvmf_bdev_ctrlr_compare_and_write_cmd ...passed
+  Test: test_nvmf_bdev_ctrlr_zcopy_start ...passed
+  Test: test_nvmf_bdev_ctrlr_cmd ...passed
+  Test: test_nvmf_bdev_ctrlr_read_write_cmd ...passed
+  Test: test_nvmf_bdev_ctrlr_nvme_passthru ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      9      9      9      0        0
+             asserts    156    156    156      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: test_discovery_log ...passed
+  Test: test_discovery_log_with_filters ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts    127    127    127      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: nvmf_test_create_subsystem ...passed
+  Test: test_spdk_nvmf_subsystem_add_ns ...passed
+  Test: test_spdk_nvmf_subsystem_set_sn ...passed
+  Test: test_reservation_register ...passed
+  Test: test_reservation_register_with_ptpl ...passed
+  Test: test_reservation_acquire_preempt_1 ...passed
+  Test: test_reservation_acquire_release_with_ptpl ...passed
+  Test: test_reservation_release ...passed
+  Test: test_reservation_unregister_notification ...passed
+  Test: test_reservation_release_notification ...passed
+  Test: test_reservation_release_notification_write_exclusive ...passed
+  Test: test_reservation_clear_notification ...passed
+  Test: test_reservation_preempt_notification ...passed
+  Test: test_spdk_nvmf_ns_event ...passed
+  Test: test_nvmf_ns_reservation_add_remove_registrant ...passed
+  Test: test_nvmf_subsystem_add_ctrlr ...passed
+  Test: test_spdk_nvmf_subsystem_add_host ...passed
+  Test: test_nvmf_ns_reservation_report ...passed
+  Test: test_nvmf_valid_nqn ...passed
+  Test: test_nvmf_ns_reservation_restore ...passed
+  Test: test_nvmf_subsystem_state_change ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     21     21     21      0        0
+             asserts    371    371    371      0      n/a
+
+Elapsed time =    0.003 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: test_nvmf_tcp_create ...passed
+  Test: test_nvmf_tcp_destroy ...passed
+  Test: test_nvmf_tcp_poll_group_create ...passed
+  Test: test_nvmf_tcp_send_c2h_data ...passed
+  Test: test_nvmf_tcp_h2c_data_hdr_handle ...passed
+  Test: test_nvmf_tcp_in_capsule_data_handle ...passed
+  Test: test_nvmf_tcp_qpair_init_mem_resource ...passed
+  Test: test_nvmf_tcp_send_c2h_term_req ...passed
+  Test: test_nvmf_tcp_send_capsule_resp_pdu ...passed
+  Test: test_nvmf_tcp_icreq_handle ...passed
+  Test: test_nvmf_tcp_check_xfer_type ...passed
+  Test: test_nvmf_tcp_invalid_sgl ...passed
+  Test: test_nvmf_tcp_pdu_ch_handle ...passed
+  Test: test_nvmf_tcp_tls_add_remove_credentials ...passed
+  Test: test_nvmf_tcp_tls_generate_psk_id ...passed
+  Test: test_nvmf_tcp_tls_generate_retained_psk ...passed
+  Test: test_nvmf_tcp_tls_generate_tls_psk ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     17     17     17      0        0
+             asserts    222    222    222      0      n/a
+
+Elapsed time =    0.014 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: nvmf
+  Test: test_nvmf_tgt_create_poll_group ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     17     17     17      0      n/a
+
+Elapsed time =    0.003 seconds
+************************************
+END TEST unittest_nvmf
+************************************
+************************************
+START TEST unittest_scsi
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: dev_suite
+  Test: dev_destruct_null_dev ...passed
+  Test: dev_destruct_zero_luns ...passed
+  Test: dev_destruct_null_lun ...passed
+  Test: dev_destruct_success ...passed
+  Test: dev_construct_num_luns_zero ...passed
+  Test: dev_construct_no_lun_zero ...passed
+  Test: dev_construct_null_lun ...passed
+  Test: dev_construct_name_too_long ...passed
+  Test: dev_construct_success ...passed
+  Test: dev_construct_success_lun_zero_not_first ...passed
+  Test: dev_queue_mgmt_task_success ...passed
+  Test: dev_queue_task_success ...passed
+  Test: dev_stop_success ...passed
+  Test: dev_add_port_max_ports ...passed
+  Test: dev_add_port_construct_failure1 ...passed
+  Test: dev_add_port_construct_failure2 ...passed
+  Test: dev_add_port_success1 ...passed
+  Test: dev_add_port_success2 ...passed
+  Test: dev_add_port_success3 ...passed
+  Test: dev_find_port_by_id_num_ports_zero ...passed
+  Test: dev_find_port_by_id_id_not_found_failure ...passed
+  Test: dev_find_port_by_id_success ...passed
+  Test: dev_add_lun_bdev_not_found ...passed
+  Test: dev_add_lun_no_free_lun_id ...passed
+  Test: dev_add_lun_success1 ...passed
+  Test: dev_add_lun_success2 ...passed
+  Test: dev_check_pending_tasks ...passed
+  Test: dev_iterate_luns ...passed
+  Test: dev_find_free_lun ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     29     29     29      0        0
+             asserts     97     97     97      0      n/a
+
+Elapsed time =    0.001 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: lun_suite
+  Test: lun_task_mgmt_execute_abort_task_not_supported ...passed
+  Test: lun_task_mgmt_execute_abort_task_all_not_supported ...passed
+  Test: lun_task_mgmt_execute_lun_reset ...passed
+  Test: lun_task_mgmt_execute_invalid_case ...passed
+  Test: lun_append_task_null_lun_task_cdb_spc_inquiry ...passed
+  Test: lun_append_task_null_lun_alloc_len_lt_4096 ...passed
+  Test: lun_append_task_null_lun_not_supported ...passed
+  Test: lun_execute_scsi_task_pending ...passed
+  Test: lun_execute_scsi_task_complete ...passed
+  Test: lun_execute_scsi_task_resize ...passed
+  Test: lun_destruct_success ...passed
+  Test: lun_construct_null_ctx ...passed
+  Test: lun_construct_success ...passed
+  Test: lun_reset_task_wait_scsi_task_complete ...passed
+  Test: lun_reset_task_suspend_scsi_task ...passed
+  Test: lun_check_pending_tasks_only_for_specific_initiator ...passed
+  Test: abort_pending_mgmt_tasks_when_lun_is_removed ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     17     17     17      0        0
+             asserts    147    147    147      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: scsi_suite
+  Test: scsi_init ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      1      1      1      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: translation_suite
+  Test: mode_select_6_test ...passed
+  Test: mode_select_6_test2 ...passed
+  Test: mode_sense_6_test ...passed
+  Test: mode_sense_10_test ...passed
+  Test: inquiry_evpd_test ...passed
+  Test: inquiry_standard_test ...passed
+  Test: inquiry_overflow_test ...passed
+  Test: task_complete_test ...passed
+  Test: lba_range_test ...passed
+  Test: xfer_len_test ...passed
+  Test: xfer_test ...passed
+  Test: scsi_name_padding_test ...passed
+  Test: get_dif_ctx_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     13     13     13      0        0
+             asserts   1179   1179   1179      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: reservation_suite
+  Test: test_reservation_register ...passed
+  Test: test_reservation_reserve ...passed
+  Test: test_reservation_preempt_non_all_regs ...passed
+  Test: test_reservation_preempt_all_regs ...passed
+  Test: test_reservation_cmds_conflict ...passed
+  Test: test_scsi2_reserve_release ...passed
+  Test: test_pr_with_scsi2_reserve_release ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      7      7      7      0        0
+             asserts    257    257    257      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_scsi
+************************************
+************************************
+START TEST unittest_sock
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: sock
+  Test: posix_sock ...passed
+  Test: ut_sock ...passed
+  Test: posix_sock_group ...passed
+  Test: ut_sock_group ...passed
+  Test: posix_sock_group_fairness ...passed
+  Test: _posix_sock_close ...passed
+  Test: sock_get_default_opts ...passed
+  Test: ut_sock_impl_get_set_opts ...passed
+  Test: posix_sock_impl_get_set_opts ...passed
+  Test: ut_sock_map ...passed
+  Test: override_impl_opts ...passed
+  Test: ut_sock_group_get_ctx ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     12     12     12      0        0
+             asserts    349    349    349      0      n/a
+
+Elapsed time =    0.005 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: posix
+  Test: flush ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     28     28     28      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_sock
+************************************
+************************************
+START TEST unittest_thread
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: io_channel
+  Test: thread_alloc ...passed
+  Test: thread_send_msg ...passed
+  Test: thread_poller ...passed
+  Test: poller_pause ...passed
+  Test: thread_for_each ...passed
+  Test: for_each_channel_remove ...passed
+  Test: for_each_channel_unreg ...passed
+  Test: thread_name ...passed
+  Test: channel ...passed
+  Test: channel_destroy_races ...passed
+  Test: thread_exit_test ...passed
+  Test: thread_update_stats_test ...passed
+  Test: nested_channel ...passed
+  Test: device_unregister_and_thread_exit_race ...passed
+  Test: cache_closest_timed_poller ...passed
+  Test: multi_timed_pollers_have_same_expiration ...passed
+  Test: io_device_lookup ...passed
+  Test: spdk_spin ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     18     18     18      0        0
+             asserts    387    387    387      0      n/a
+
+Elapsed time =    0.004 seconds
+************************************
+END TEST unittest_thread
+************************************
+************************************
+START TEST unittest_iobuf
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: io_channel
+  Test: iobuf ...passed
+  Test: iobuf_cache ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts    107    107    107      0      n/a
+
+Elapsed time =    0.001 seconds
+************************************
+END TEST unittest_iobuf
+************************************
+************************************
+START TEST unittest_util
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: base64
+  Test: test_base64_get_encoded_strlen ...passed
+  Test: test_base64_get_decoded_len ...passed
+  Test: test_base64_encode ...passed
+  Test: test_base64_decode ...passed
+  Test: test_base64_urlsafe_encode ...passed
+  Test: test_base64_urlsafe_decode ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts    112    112    112      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: bit_array
+  Test: test_1bit ...passed
+  Test: test_64bit ...passed
+  Test: test_find ...passed
+  Test: test_resize ...passed
+  Test: test_errors ...passed
+  Test: test_count ...passed
+  Test: test_mask_store_load ...passed
+  Test: test_mask_clear ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts   5075   5075   5075      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: cpuset
+  Test: test_cpuset ...passed
+  Test: test_cpuset_parse ...passed
+  Test: test_cpuset_fmt ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts     65     65     65      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: crc16
+  Test: test_crc16_t10dif ...passed
+  Test: test_crc16_t10dif_seed ...passed
+  Test: test_crc16_t10dif_copy ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts      5      5      5      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: crc32_ieee
+  Test: test_crc32_ieee ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      1      1      1      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: crc32c
+  Test: test_crc32c ...passed
+  Test: test_crc32c_nvme ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     16     16     16      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: crc64
+  Test: test_crc64_nvme ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts      4      4      4      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: string
+  Test: test_parse_ip_addr ...passed
+  Test: test_str_chomp ...passed
+  Test: test_parse_capacity ...passed
+  Test: test_sprintf_append_realloc ...passed
+  Test: test_strtol ...passed
+  Test: test_strtoll ...passed
+  Test: test_strarray ...passed
+  Test: test_strcpy_replace ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts    161    161    161      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: dif
+  Test: dif_generate_and_verify_test ...passed
+  Test: dif_disable_check_test ...passed
+  Test: dif_generate_and_verify_different_pi_formats_test ...passed
+  Test: dif_apptag_mask_test ...passed
+  Test: dif_sec_512_md_0_error_test ...passed
+  Test: dif_sec_4096_md_0_error_test ...passed
+  Test: dif_sec_4100_md_128_error_test ...passed
+  Test: dif_guard_seed_test ...passed
+  Test: dif_guard_value_test ...passed
+  Test: dif_disable_sec_512_md_8_single_iov_test ...passed
+  Test: dif_sec_512_md_8_prchk_0_single_iov_test ...passed
+  Test: dif_sec_4096_md_128_prchk_0_single_iov_test ...passed
+  Test: dif_sec_512_md_8_prchk_0_1_2_4_multi_iovs_test ...passed
+  Test: dif_sec_4096_md_128_prchk_0_1_2_4_multi_iovs_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_split_data_and_md_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_split_data_and_md_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_split_data_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_split_data_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_split_guard_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_split_guard_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_split_apptag_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_split_apptag_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_split_reftag_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_split_reftag_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_complex_splits_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_complex_splits_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_data_and_md_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_data_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_guard_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_apptag_pi_16_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_apptag_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_reftag_pi_16_test ...passed
+  Test: dif_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_reftag_test ...passed
+  Test: dif_copy_sec_512_md_8_prchk_0_single_iov ...passed
+  Test: dif_copy_sec_4096_md_128_prchk_0_single_iov_test ...passed
+  Test: dif_copy_sec_512_md_8_prchk_0_1_2_4_multi_iovs ...passed
+  Test: dif_copy_sec_4096_md_128_prchk_0_1_2_4_multi_iovs_test ...passed
+  Test: dif_copy_sec_4096_md_128_prchk_7_multi_iovs ...passed
+  Test: dif_copy_sec_512_md_8_prchk_7_multi_iovs_split_data ...passed
+  Test: dif_copy_sec_4096_md_128_prchk_7_multi_iovs_split_data_test ...passed
+  Test: dif_copy_sec_512_md_8_prchk_7_multi_iovs_complex_splits ...passed
+  Test: dif_copy_sec_4096_md_128_prchk_7_multi_iovs_complex_splits_test ...passed
+  Test: dif_copy_sec_4096_md_128_inject_1_2_4_8_multi_iovs_test ...passed
+  Test: dif_copy_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_test ...passed
+  Test: dix_sec_512_md_0_error ...passed
+  Test: dix_sec_512_md_8_prchk_0_single_iov ...passed
+  Test: dix_sec_4096_md_128_prchk_0_single_iov_test ...passed
+  Test: dix_sec_512_md_8_prchk_0_1_2_4_multi_iovs ...passed
+  Test: dix_sec_4096_md_128_prchk_0_1_2_4_multi_iovs_test ...passed
+  Test: dix_sec_4096_md_128_prchk_7_multi_iovs ...passed
+  Test: dix_sec_512_md_8_prchk_7_multi_iovs_split_data ...passed
+  Test: dix_sec_4096_md_128_prchk_7_multi_iovs_split_data_test ...passed
+  Test: dix_sec_512_md_8_prchk_7_multi_iovs_complex_splits ...passed
+  Test: dix_sec_4096_md_128_prchk_7_multi_iovs_complex_splits_test ...passed
+  Test: dix_sec_4096_md_128_inject_1_2_4_8_multi_iovs_test ...passed
+  Test: dix_sec_4096_md_128_inject_1_2_4_8_multi_iovs_split_test ...passed
+  Test: set_md_interleave_iovs_test ...passed
+  Test: set_md_interleave_iovs_split_test ...passed
+  Test: dif_generate_stream_pi_16_test ...passed
+  Test: dif_generate_stream_test ...passed
+  Test: set_md_interleave_iovs_alignment_test ...passed
+  Test: dif_generate_split_test ...passed
+  Test: set_md_interleave_iovs_multi_segments_test ...passed
+  Test: dif_verify_split_test ...passed
+  Test: dif_verify_stream_multi_segments_test ...passed
+  Test: update_crc32c_pi_16_test ...passed
+  Test: update_crc32c_test ...passed
+  Test: dif_update_crc32c_split_test ...passed
+  Test: dif_update_crc32c_stream_multi_segments_test ...passed
+  Test: get_range_with_md_test ...passed
+  Test: dif_sec_512_md_8_prchk_7_multi_iovs_remap_pi_16_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_remap_test ...passed
+  Test: dif_sec_4096_md_128_prchk_7_multi_iovs_complex_splits_remap_test ...passed
+  Test: dix_sec_4096_md_128_prchk_7_multi_iovs_remap ...passed
+  Test: dix_sec_512_md_8_prchk_7_multi_iovs_complex_splits_remap_pi_16_test ...passed
+  Test: dix_sec_4096_md_128_prchk_7_multi_iovs_complex_splits_remap_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests     78     78     78      0        0
+             asserts   3573   3573   3573      0      n/a
+
+Elapsed time =    0.027 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: iov
+  Test: test_single_iov ...passed
+  Test: test_simple_iov ...passed
+  Test: test_complex_iov ...passed
+  Test: test_iovs_to_buf ...passed
+  Test: test_buf_to_iovs ...passed
+  Test: test_memset ...passed
+  Test: test_iov_one ...passed
+  Test: test_iov_xfer ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      8      8      8      0        0
+             asserts    156    156    156      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: math
+  Test: test_serial_number_arithmetic ...passed
+Suite: erase
+  Test: test_memset_s ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      2      2    n/a      0        0
+               tests      2      2      2      0        0
+             asserts     18     18     18      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: pipe
+  Test: test_create_destroy ...passed
+  Test: test_write_get_buffer ...passed
+  Test: test_write_advance ...passed
+  Test: test_read_get_buffer ...passed
+  Test: test_read_advance ...passed
+  Test: test_data ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      6      6      6      0        0
+             asserts    250    250    250      0      n/a
+
+Elapsed time =    0.000 seconds
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: xor
+  Test: test_xor_gen ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     17     17     17      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_util
+************************************
+************************************
+START TEST unittest_vhost
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: vhost_suite
+  Test: desc_to_iov_test ...passed
+  Test: create_controller_test ...passed
+  Test: session_find_by_vid_test ...passed
+  Test: remove_controller_test ...passed
+  Test: vq_avail_ring_get_test ...passed
+  Test: vq_packed_ring_test ...passed
+  Test: vhost_blk_construct_test ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      7      7      7      0        0
+             asserts    145    145    145      0      n/a
+
+Elapsed time =    0.002 seconds
+************************************
+END TEST unittest_vhost
+************************************
+************************************
+START TEST unittest_dma
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: dma_suite
+  Test: test_dma ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      1      1      1      0        0
+             asserts     50     50     50      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_dma
+************************************
+************************************
+START TEST unittest_init
+************************************
+
+
+     CUnit - A unit testing framework for C - Version 2.1-3
+     http://cunit.sourceforge.net/
+
+
+Suite: subsystem_suite
+  Test: subsystem_sort_test_depends_on_single ...passed
+  Test: subsystem_sort_test_depends_on_multiple ...passed
+  Test: subsystem_sort_test_missing_dependency ...passed
+
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites      1      1    n/a      0        0
+               tests      3      3      3      0        0
+             asserts     20     20     20      0      n/a
+
+Elapsed time =    0.000 seconds
+************************************
+END TEST unittest_init
+************************************
+
+
+=====================
+All unit tests passed
+=====================
+WARN: lcov not installed or SPDK built without coverage!
+WARN: neither valgrind nor ASAN is enabled!
+
+

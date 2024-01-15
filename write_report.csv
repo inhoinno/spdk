@@ -1,0 +1,2 @@
+write test random 1G
+start(s),		end(s),		start(us),		end(us),		time(s),		time(us),		pid,		slba,		nlb,		secsize

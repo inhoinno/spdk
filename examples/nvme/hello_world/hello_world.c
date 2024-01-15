@@ -466,6 +466,7 @@ main(int argc, char **argv)
 	printf("Initializing NVMe Controllers\n");
 
 	if (g_vmd && spdk_vmd_init()) {
+		//OK
 		fprintf(stderr, "Failed to initialize VMD."
 			" Some NVMe devices can be unavailable.\n");
 	}
@@ -479,12 +480,14 @@ main(int argc, char **argv)
 	 */
 	rc = spdk_nvme_probe(&g_trid, NULL, probe_cb, attach_cb, NULL);
 	if (rc != 0) {
+		//OK
 		fprintf(stderr, "spdk_nvme_probe() failed\n");
 		rc = 1;
 		goto exit;
 	}
 
 	if (TAILQ_EMPTY(&g_controllers)) {
+
 		fprintf(stderr, "no NVMe controllers found\n");
 		rc = 1;
 		goto exit;
